@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png"
+        href="https://1385425497.rsc.cdn77.org//variants/vortex/images/new_design/favicon-32x32.png" sizes="32x32">
+    <script src="https://kit.fontawesome.com/6e5acc8382.js" crossorigin="anonymous"></script>
+    <title>Vortex - LOGIN</title>
+    <style>
+    
+      *{
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+}
+
+.container{
+	display: flex;
+	background-color: white;
+	padding: 0px;
+}
+
+.yellow-side{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 40vw;
+	background-color: #ffaa00;
+	background-image: url(../img/hero-top.png),url(../img/hero-right-bg.svg);
+	background-position: top left, bottom right;
+	background-size: 400px,300px;
+	background-repeat: no-repeat, no-repeat;
+	height: 100vh;
+	padding: 0 30px;
+}
+.logo-login{
+	display: flex;
+	width: 100%;
+	align-items: flex-start;
+	margin-bottom: 30px;
+}
+
+.yellow-side h1{
+	font-size: 80px;
+	font-weight: 600;
+	line-height: 65px;
+}
+
+.login-sec{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 60vw;
+	background-color: white;
+}
+
+.form{
+	display: flex;
+	flex-direction: column;
+}
+
+.form-group{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 10px;
+}
+
+.input{
+	width: 100%;	
+	height: 50px;
+	background-color: white;
+	color: #000000;
+	border: 1px solid #dfdfdf;
+	border-radius: 4px;
+	margin-bottom: 10px;
+	padding-left: 40px;
+	box-sizing: border-box;
+}
+
+.input:focus{
+	outline: none;
+}
+
+.input:hover{
+	border: 2px solid black;
+	background-color: #fafafa;
+}
+
+
+.login-head{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	margin-bottom: 50px;
+}
+
+.login-head h1{
+	font-size: 40px;
+	cursor: pointer;
+}
+
+.login-head h1:hover{
+	text-decoration: underline;
+}
+
+#login{
+	color: #ffb800;
+}
+
+#create{
+	color: gray;
+}
+#create:hover{
+	color: black;
+}
+
+.forgot-sec{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	box-sizing: border-box;
+	padding: 0 10px;
+	width: 400px;
+}
+
+.forgot-sec p{
+	color: black;
+	/*margin: 0 55px 0 5px ;*/
+	font-size: 14px;
+}
+
+.forgot-sec p a{
+	text-decoration: none;
+	color: black;
+}
+.check{
+	border: 2px solid black;
+	margin-right: 5px;
+}
+
+#keep{
+	display: flex;
+}
+
+.btn-login{
+	background-color: black !important;
+	color: white !important;
+	margin-top: 50px !important;
+	width: 99.5% !important;
+}
+
+.fa-user{
+	/*position: absolute;*/
+	/*left: 790px;*/
+	/*top: 268px;*/
+	color: gray;
+}
+
+.fa-lock{
+	/*position: absolute;*/
+	/*left: 790px;*/
+	/*top: 327px;*/
+	color: gray;
+}
+
+.fas{
+	transform: translate(14px,32px);
+}
+
+.icon{
+	display: flex;
+	justify-content: flex-start;
+	width: 100%;
+	/*position: absolute;*/
+}
+
+@media only screen and (max-width: 530px){
+	.container{
+		display: flex;
+		flex-direction: column;
+	}
+	.yellow-side{
+		width: auto;
+		padding: 0 30px;
+		font-size: 50%;
+	}
+	.login-sec{
+		width: auto;
+		padding: 30 40px;
+	}
+	#create{
+		/*display: none;*/
+	}
+	.login-head{
+		margin-top: 50px;
+		margin-right: 50px;
+	}
+	.btn-login{
+		margin-bottom: 50px;
+	}
+}
+
+@media only screen and (max-width: 400px){
+	.login-sec{
+		margin: 0 50px;
+	}
+
+      
+    </style>
+  
+</head>
+
+<body>
+	<section class="container">
+		<div class="yellow-side">
+			<div class="logo-login">
+				<img src="img/logo-thin-2.svg">
+			</div>
+			<h1>Game has changed</h1>
+		</div>
+		<div class="login-sec">
+			<form class="form">
+				<div class="login-head">
+					<h1 id="login">Log in </h1>
+					<h1 id="create">Create New</h1>	
+				</div>	
+				<div class="form-group">
+					<span class="icon"><i class="fas fa-user"></i></span>
+					<input class="input" type="text" name="username" placeholder="User e-mail">
+					<span class="icon"><i class="fas fa-lock"></i></span>
+					<input class="input" type="password" name="password" placeholder="Password">
+				</div>
+				<div class="forgot-sec">
+					<div id="keep">
+						<input class="check" type="checkbox" name="checkbox">
+						<p class="keep">Keep me signed in</p>
+					</div>
+					<p><a href="">I forgot my password</a></p>
+				</div>
+				<button class="btn btn-ghost btn-login">LOGIN</button>
+			</form>
+		</div>
+	</section>
+</body>
+
+</html>
